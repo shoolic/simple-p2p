@@ -1,0 +1,58 @@
+#directories
+*Doxygen/
+.idea/*
+[Bb]in/*
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Oo]bj/
+[Ll]og/
+[Bb]uild/
+
+#CMake files
+CMakeFiles/
+cmake*
+*.cmake
+CMakeCache.txt
+[Mm]akefile
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# tex Xd
+*.aux
+*.log
+*.synctex.gz
+*.toc
+/build/

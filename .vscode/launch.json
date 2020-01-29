@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(gdb) Smart Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/Debug/Simple_P2P",
+      "args": [
+        "--my_ip",
+        "$(hostname -I | awk '{print $1;}')",
+        "--broadcast_ip",
+        "$(ip -o -f inet addr show | awk '/scope global/ {print $6}' | head -n 1)"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

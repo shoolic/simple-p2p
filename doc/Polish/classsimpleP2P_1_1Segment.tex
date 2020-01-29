@@ -1,0 +1,115 @@
+\hypertarget{classsimpleP2P_1_1Segment}{}\section{simple\+P2P\+:\+:Segment Class Reference}
+\label{classsimpleP2P_1_1Segment}\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+
+
+Class representing a segment of a resource.  
+
+
+
+
+{\ttfamily \#include $<$Segment.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1Segment_a35cd2a4c12538c14fca1943a2145b160}{Segment} (Segment\+Id id\+\_\+c, Uint8 $\ast$data\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classsimpleP2P_1_1Segment}{Segment} object. \end{DoxyCompactList}\item 
+Segment\+Id \hyperlink{classsimpleP2P_1_1Segment_a668617f24ad0ffd7cdf974cbfff29689}{get\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Get the segment id. \end{DoxyCompactList}\item 
+Uint8 $\ast$ \hyperlink{classsimpleP2P_1_1Segment_ac46dfa3d5857e6ba03919738cc741dab}{get\+\_\+data\+\_\+ptr} () const
+\begin{DoxyCompactList}\small\item\em Get the pointer to the segment data. \end{DoxyCompactList}\item 
+std\+::vector$<$ Uint8 $>$ \hyperlink{classsimpleP2P_1_1Segment_a2a153d1483576cdec85e0bbfe10e11b5}{serialize\+\_\+id} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classsimpleP2P_1_1Segment}{Segment} \hyperlink{classsimpleP2P_1_1Segment_a56647eb9ebec99422adec7934833eb18}{no\+\_\+segment\+\_\+left} ()
+\begin{DoxyCompactList}\small\item\em Special method returning \hyperlink{classsimpleP2P_1_1Segment}{Segment} object with id set to N\+O\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+ID indicating no segment to download in complete resource object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_ae40a3db5a0152fcc524944e7765176a5}\label{classsimpleP2P_1_1Segment_ae40a3db5a0152fcc524944e7765176a5}} 
+static const Segment\+Id \hyperlink{classsimpleP2P_1_1Segment_ae40a3db5a0152fcc524944e7765176a5}{N\+O\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+ID} = static\+\_\+cast$<$Segment\+Id$>$(-\/1)
+\begin{DoxyCompactList}\small\item\em Special id number indicating no segment to download in complete resource object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a segment of a resource. 
+
+It contains an id of the segment and a pointer to the segment data in complete resource object. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_a35cd2a4c12538c14fca1943a2145b160}\label{classsimpleP2P_1_1Segment_a35cd2a4c12538c14fca1943a2145b160}} 
+\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{Segment\+Id}]{id\+\_\+c,  }\item[{Uint8 $\ast$}]{data\+\_\+c }\end{DoxyParamCaption})}
+
+
+
+Construct a new \hyperlink{classsimpleP2P_1_1Segment}{Segment} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+c} & segment id \\
+\hline
+{\em data\+\_\+c} & pointer to the segment data in complete resource object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_ac46dfa3d5857e6ba03919738cc741dab}\label{classsimpleP2P_1_1Segment_ac46dfa3d5857e6ba03919738cc741dab}} 
+\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}!get\+\_\+data\+\_\+ptr@{get\+\_\+data\+\_\+ptr}}
+\index{get\+\_\+data\+\_\+ptr@{get\+\_\+data\+\_\+ptr}!simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+ptr()}{get\_data\_ptr()}}
+{\footnotesize\ttfamily Uint8 $\ast$ simple\+P2\+P\+::\+Segment\+::get\+\_\+data\+\_\+ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the pointer to the segment data. 
+
+\begin{DoxyReturn}{Returns}
+Uint8$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_a668617f24ad0ffd7cdf974cbfff29689}\label{classsimpleP2P_1_1Segment_a668617f24ad0ffd7cdf974cbfff29689}} 
+\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+\subsubsection{\texorpdfstring{get\+\_\+id()}{get\_id()}}
+{\footnotesize\ttfamily Segment\+Id simple\+P2\+P\+::\+Segment\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the segment id. 
+
+\begin{DoxyReturn}{Returns}
+Segment\+Id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_a56647eb9ebec99422adec7934833eb18}\label{classsimpleP2P_1_1Segment_a56647eb9ebec99422adec7934833eb18}} 
+\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}!no\+\_\+segment\+\_\+left@{no\+\_\+segment\+\_\+left}}
+\index{no\+\_\+segment\+\_\+left@{no\+\_\+segment\+\_\+left}!simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+\subsubsection{\texorpdfstring{no\+\_\+segment\+\_\+left()}{no\_segment\_left()}}
+{\footnotesize\ttfamily \hyperlink{classsimpleP2P_1_1Segment}{Segment} simple\+P2\+P\+::\+Segment\+::no\+\_\+segment\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Special method returning \hyperlink{classsimpleP2P_1_1Segment}{Segment} object with id set to N\+O\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+ID indicating no segment to download in complete resource object. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classsimpleP2P_1_1Segment}{Segment} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Segment_a2a153d1483576cdec85e0bbfe10e11b5}\label{classsimpleP2P_1_1Segment_a2a153d1483576cdec85e0bbfe10e11b5}} 
+\index{simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}!serialize\+\_\+id@{serialize\+\_\+id}}
+\index{serialize\+\_\+id@{serialize\+\_\+id}!simple\+P2\+P\+::\+Segment@{simple\+P2\+P\+::\+Segment}}
+\subsubsection{\texorpdfstring{serialize\+\_\+id()}{serialize\_id()}}
+{\footnotesize\ttfamily std\+::vector$<$Uint8$>$ simple\+P2\+P\+::\+Segment\+::serialize\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Uint8$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Segment.\+h\item 
+src/Segment.\+cpp\end{DoxyCompactItemize}

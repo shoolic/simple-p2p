@@ -1,0 +1,50 @@
+\hypertarget{classsimpleP2P_1_1RequestServer}{}\section{simple\+P2P\+:\+:Request\+Server Class Reference}
+\label{classsimpleP2P_1_1RequestServer}\index{simple\+P2\+P\+::\+Request\+Server@{simple\+P2\+P\+::\+Request\+Server}}
+
+
+Asynchronous T\+CP server.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Server.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1RequestServer_a66d8609132bfc064a3b40b6264d8f68d}{Request\+Server} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, Uint16 port, \hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&fm, \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&lm)
+\begin{DoxyCompactList}\small\item\em Constructor allows setting the parameters for the connnetion acceptor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestServer_a6a111e7a8ca8e7d94cc5f70382379bc7}\label{classsimpleP2P_1_1RequestServer_a6a111e7a8ca8e7d94cc5f70382379bc7}} 
+std\+::thread \hyperlink{classsimpleP2P_1_1RequestServer_a6a111e7a8ca8e7d94cc5f70382379bc7}{init} ()
+\begin{DoxyCompactList}\small\item\em Turns on the listening and accepting connections and returns the thread in which it works. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Asynchronous T\+CP server. 
+
+It accepts connections asynchronously and for each of them creates a worker object to handle it. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestServer_a66d8609132bfc064a3b40b6264d8f68d}\label{classsimpleP2P_1_1RequestServer_a66d8609132bfc064a3b40b6264d8f68d}} 
+\index{simple\+P2\+P\+::\+Request\+Server@{simple\+P2\+P\+::\+Request\+Server}!Request\+Server@{Request\+Server}}
+\index{Request\+Server@{Request\+Server}!simple\+P2\+P\+::\+Request\+Server@{simple\+P2\+P\+::\+Request\+Server}}
+\subsubsection{\texorpdfstring{Request\+Server()}{RequestServer()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Request\+Server\+::\+Request\+Server (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service,  }\item[{Uint16}]{port,  }\item[{\hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&}]{fm,  }\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{lm }\end{DoxyParamCaption})}
+
+
+
+Constructor allows setting the parameters for the connnetion acceptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+service} & boost\+::asio\+::io\+\_\+service for the acceptor. \\
+\hline
+{\em port} & Port for the acceptor to listen on. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Request\+Server.\+h\item 
+src/Request\+Server.\+cpp\end{DoxyCompactItemize}

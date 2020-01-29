@@ -1,0 +1,78 @@
+\hypertarget{classsimpleP2P_1_1Printer}{}\section{simple\+P2P\+:\+:Printer Class Reference}
+\label{classsimpleP2P_1_1Printer}\index{simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}}
+
+
+class printing outputs, using queue in order to avoid races  
+
+
+
+
+{\ttfamily \#include $<$Printer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1Printer_ac18a99f5eab2c8c0b077063e5ed04916}{Printer} (std\+::ostream \&output\+\_\+c=std\+::cout)
+\begin{DoxyCompactList}\small\item\em Constructor for the printer. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classsimpleP2P_1_1Printer_a9291e626c231334f26c305ab51e6cf19}{init} ()
+\begin{DoxyCompactList}\small\item\em Init methods run worker in thread and returns it. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1Printer_a296b8acb2cf397eaab98087efd8959db}{print} (std\+::string line)
+\begin{DoxyCompactList}\small\item\em Synchronised method for printing output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class printing outputs, using queue in order to avoid races 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Printer_ac18a99f5eab2c8c0b077063e5ed04916}\label{classsimpleP2P_1_1Printer_ac18a99f5eab2c8c0b077063e5ed04916}} 
+\index{simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}!Printer@{Printer}}
+\index{Printer@{Printer}!simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}}
+\subsubsection{\texorpdfstring{Printer()}{Printer()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Printer\+::\+Printer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output\+\_\+c = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the printer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+c} & Output stream for couts \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Printer_a9291e626c231334f26c305ab51e6cf19}\label{classsimpleP2P_1_1Printer_a9291e626c231334f26c305ab51e6cf19}} 
+\index{simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}!init@{init}}
+\index{init@{init}!simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::thread simple\+P2\+P\+::\+Printer\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Init methods run worker in thread and returns it. 
+
+\begin{DoxyReturn}{Returns}
+printing std\+::thread 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Printer_a296b8acb2cf397eaab98087efd8959db}\label{classsimpleP2P_1_1Printer_a296b8acb2cf397eaab98087efd8959db}} 
+\index{simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}!print@{print}}
+\index{print@{print}!simple\+P2\+P\+::\+Printer@{simple\+P2\+P\+::\+Printer}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Printer\+::print (\begin{DoxyParamCaption}\item[{std\+::string}]{line }\end{DoxyParamCaption})}
+
+
+
+Synchronised method for printing output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Printer.\+h\item 
+src/Printer.\+cpp\end{DoxyCompactItemize}

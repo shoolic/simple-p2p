@@ -1,0 +1,254 @@
+\hypertarget{classsimpleP2P_1_1ResourceDatabase}{}\section{simple\+P2P\+:\+:Resource\+Database Class Reference}
+\label{classsimpleP2P_1_1ResourceDatabase}\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+
+
+Class holding information about files in network and on localhost.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Database.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1ResourceDatabase_a6fb45392300235160204e9666267eb51}{Resource\+Database} (\hyperlink{classsimpleP2P_1_1Host}{Host} localhost)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_aa2d77490749129d0b8cd2b5abe9aec68}{add\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res, const \hyperlink{classsimpleP2P_1_1Host}{Host} \&host)
+\begin{DoxyCompactList}\small\item\em Adds connection between file and resource, adn creates them if they do not exist. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a3ea481ae3b35f9c93e55595a38d8bec4}{remove\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res, const \hyperlink{classsimpleP2P_1_1Host}{Host} \&host)
+\begin{DoxyCompactList}\small\item\em Removes connection between file and resource. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a702f98ada572961ce3665bded3b20903}{update\+\_\+host} (const \hyperlink{classsimpleP2P_1_1Host}{Host} \&host)
+\begin{DoxyCompactList}\small\item\em Updates the list of resources aviable from host Triggered after receive of full Beacon Packet. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a266b2d64276b46153257b1d798860682}{revoke\+\_\+resource} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&resource)
+\begin{DoxyCompactList}\small\item\em Revokes resource and disconnects it from Hosts in database and database itself \hyperlink{classsimpleP2P_1_1Resource}{Resource} will still point to Hosts that possess it. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a837b7ec01d60df86d1f6b66350f7c78b}{add\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res)
+\begin{DoxyCompactList}\small\item\em same as add\+\_\+file(\+Resource, Host) but host is localhost \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a995998d524895ed8227fa045b8b64c01}{remove\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res)
+\begin{DoxyCompactList}\small\item\em same as remove\+\_\+file(\+Resource, Host) but host is localhost \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ \hyperlink{classsimpleP2P_1_1ResourceDatabase_a32c5a7b08405cbef80010f8ec1119f58}{who\+\_\+has\+\_\+file} (std\+::vector$<$ Uint8 $>$ resource\+\_\+header)
+\begin{DoxyCompactList}\small\item\em Returns shared pointer to resource to allow access to information about file owners. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ \hyperlink{classsimpleP2P_1_1ResourceDatabase_a1148b6d172d74970c2208d24aac4db3e}{who\+\_\+has\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res)
+\begin{DoxyCompactList}\small\item\em Returns shared pointer to resource to allow access to information about file owners. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Uint8 $>$ $>$ \hyperlink{classsimpleP2P_1_1ResourceDatabase_ac0bd5de646419fe620f641502a400028}{generate\+\_\+database\+\_\+headers} ()
+\begin{DoxyCompactList}\small\item\em Generates listing of localhost content in a header. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Host}{Host} $>$ \hyperlink{classsimpleP2P_1_1ResourceDatabase_a4d8c618cbb707f9b29f6315ff1abe6f6}{get\+\_\+localhost} () const
+\begin{DoxyCompactList}\small\item\em Get localhost information. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1ResourceDatabase_a98531f381542ba5c0ec28f455f56ec26}{check\+\_\+for\+\_\+gone\+\_\+hosts} (Uint16 left\+\_\+margin=L\+E\+F\+T\+\_\+\+M\+A\+R\+G\+IN)
+\begin{DoxyCompactList}\small\item\em Checks if any of the host missed a couple beacon intervals as we suppose they left the network. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ $>$ \hyperlink{classsimpleP2P_1_1ResourceDatabase_a85e304c650a0a3d5cd2395587befceeb}{get\+Resources} () const
+\begin{DoxyCompactList}\small\item\em Obtains copy of possessed resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class holding information about files in network and on localhost. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a6fb45392300235160204e9666267eb51}\label{classsimpleP2P_1_1ResourceDatabase_a6fb45392300235160204e9666267eb51}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!Resource\+Database@{Resource\+Database}}
+\index{Resource\+Database@{Resource\+Database}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{Resource\+Database()}{ResourceDatabase()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Resource\+Database\+::\+Resource\+Database (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1Host}{Host}}]{localhost }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em localhost} & localhost \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_aa2d77490749129d0b8cd2b5abe9aec68}\label{classsimpleP2P_1_1ResourceDatabase_aa2d77490749129d0b8cd2b5abe9aec68}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!add\+\_\+file@{add\+\_\+file}}
+\index{add\+\_\+file@{add\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{add\+\_\+file()}{add\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::add\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res,  }\item[{const \hyperlink{classsimpleP2P_1_1Host}{Host} \&}]{host }\end{DoxyParamCaption})}
+
+
+
+Adds connection between file and resource, adn creates them if they do not exist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be added \\
+\hline
+{\em host} & \hyperlink{classsimpleP2P_1_1Host}{Host} which possess \hyperlink{classsimpleP2P_1_1Resource}{Resource} res \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a837b7ec01d60df86d1f6b66350f7c78b}\label{classsimpleP2P_1_1ResourceDatabase_a837b7ec01d60df86d1f6b66350f7c78b}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!add\+\_\+file@{add\+\_\+file}}
+\index{add\+\_\+file@{add\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{add\+\_\+file()}{add\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::add\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res }\end{DoxyParamCaption})}
+
+
+
+same as add\+\_\+file(\+Resource, Host) but host is localhost 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a98531f381542ba5c0ec28f455f56ec26}\label{classsimpleP2P_1_1ResourceDatabase_a98531f381542ba5c0ec28f455f56ec26}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!check\+\_\+for\+\_\+gone\+\_\+hosts@{check\+\_\+for\+\_\+gone\+\_\+hosts}}
+\index{check\+\_\+for\+\_\+gone\+\_\+hosts@{check\+\_\+for\+\_\+gone\+\_\+hosts}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{check\+\_\+for\+\_\+gone\+\_\+hosts()}{check\_for\_gone\_hosts()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::check\+\_\+for\+\_\+gone\+\_\+hosts (\begin{DoxyParamCaption}\item[{Uint16}]{left\+\_\+margin = {\ttfamily LEFT\+\_\+MARGIN} }\end{DoxyParamCaption})}
+
+
+
+Checks if any of the host missed a couple beacon intervals as we suppose they left the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+margin} & number of left margins needed for deletion of the host \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_ac0bd5de646419fe620f641502a400028}\label{classsimpleP2P_1_1ResourceDatabase_ac0bd5de646419fe620f641502a400028}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!generate\+\_\+database\+\_\+headers@{generate\+\_\+database\+\_\+headers}}
+\index{generate\+\_\+database\+\_\+headers@{generate\+\_\+database\+\_\+headers}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{generate\+\_\+database\+\_\+headers()}{generate\_database\_headers()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Uint8 $>$ $>$ simple\+P2\+P\+::\+Resource\+Database\+::generate\+\_\+database\+\_\+headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates listing of localhost content in a header. 
+
+\begin{DoxyReturn}{Returns}
+listing header of localhost resources 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a4d8c618cbb707f9b29f6315ff1abe6f6}\label{classsimpleP2P_1_1ResourceDatabase_a4d8c618cbb707f9b29f6315ff1abe6f6}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!get\+\_\+localhost@{get\+\_\+localhost}}
+\index{get\+\_\+localhost@{get\+\_\+localhost}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{get\+\_\+localhost()}{get\_localhost()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Host}{Host} $>$ simple\+P2\+P\+::\+Resource\+Database\+::get\+\_\+localhost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get localhost information. 
+
+\begin{DoxyReturn}{Returns}
+localhost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a85e304c650a0a3d5cd2395587befceeb}\label{classsimpleP2P_1_1ResourceDatabase_a85e304c650a0a3d5cd2395587befceeb}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!get\+Resources@{get\+Resources}}
+\index{get\+Resources@{get\+Resources}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{get\+Resources()}{getResources()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ $>$ simple\+P2\+P\+::\+Resource\+Database\+::get\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtains copy of possessed resources. 
+
+\begin{DoxyReturn}{Returns}
+copy of possessed resources vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a3ea481ae3b35f9c93e55595a38d8bec4}\label{classsimpleP2P_1_1ResourceDatabase_a3ea481ae3b35f9c93e55595a38d8bec4}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!remove\+\_\+file@{remove\+\_\+file}}
+\index{remove\+\_\+file@{remove\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{remove\+\_\+file()}{remove\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::remove\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res,  }\item[{const \hyperlink{classsimpleP2P_1_1Host}{Host} \&}]{host }\end{DoxyParamCaption})}
+
+
+
+Removes connection between file and resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be removed from host list \\
+\hline
+{\em host} & \hyperlink{classsimpleP2P_1_1Host}{Host} which resource will be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a995998d524895ed8227fa045b8b64c01}\label{classsimpleP2P_1_1ResourceDatabase_a995998d524895ed8227fa045b8b64c01}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!remove\+\_\+file@{remove\+\_\+file}}
+\index{remove\+\_\+file@{remove\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{remove\+\_\+file()}{remove\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::remove\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res }\end{DoxyParamCaption})}
+
+
+
+same as remove\+\_\+file(\+Resource, Host) but host is localhost 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be removed from localhost list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a266b2d64276b46153257b1d798860682}\label{classsimpleP2P_1_1ResourceDatabase_a266b2d64276b46153257b1d798860682}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!revoke\+\_\+resource@{revoke\+\_\+resource}}
+\index{revoke\+\_\+resource@{revoke\+\_\+resource}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{revoke\+\_\+resource()}{revoke\_resource()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::revoke\+\_\+resource (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{resource }\end{DoxyParamCaption})}
+
+
+
+Revokes resource and disconnects it from Hosts in database and database itself \hyperlink{classsimpleP2P_1_1Resource}{Resource} will still point to Hosts that possess it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be revoked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a702f98ada572961ce3665bded3b20903}\label{classsimpleP2P_1_1ResourceDatabase_a702f98ada572961ce3665bded3b20903}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!update\+\_\+host@{update\+\_\+host}}
+\index{update\+\_\+host@{update\+\_\+host}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{update\+\_\+host()}{update\_host()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Resource\+Database\+::update\+\_\+host (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Host}{Host} \&}]{host }\end{DoxyParamCaption})}
+
+
+
+Updates the list of resources aviable from host Triggered after receive of full Beacon Packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \hyperlink{classsimpleP2P_1_1Host}{Host} and possesed resources in a struct \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a32c5a7b08405cbef80010f8ec1119f58}\label{classsimpleP2P_1_1ResourceDatabase_a32c5a7b08405cbef80010f8ec1119f58}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!who\+\_\+has\+\_\+file@{who\+\_\+has\+\_\+file}}
+\index{who\+\_\+has\+\_\+file@{who\+\_\+has\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{who\+\_\+has\+\_\+file()}{who\_has\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ simple\+P2\+P\+::\+Resource\+Database\+::who\+\_\+has\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Uint8 $>$}]{resource\+\_\+header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns shared pointer to resource to allow access to information about file owners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} about which information is gathered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared pointer to res 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1ResourceDatabase_a1148b6d172d74970c2208d24aac4db3e}\label{classsimpleP2P_1_1ResourceDatabase_a1148b6d172d74970c2208d24aac4db3e}} 
+\index{simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}!who\+\_\+has\+\_\+file@{who\+\_\+has\+\_\+file}}
+\index{who\+\_\+has\+\_\+file@{who\+\_\+has\+\_\+file}!simple\+P2\+P\+::\+Resource\+Database@{simple\+P2\+P\+::\+Resource\+Database}}
+\subsubsection{\texorpdfstring{who\+\_\+has\+\_\+file()}{who\_has\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ simple\+P2\+P\+::\+Resource\+Database\+::who\+\_\+has\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Returns shared pointer to resource to allow access to information about file owners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} about which information is gathered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shared pointer to res 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Resource\+Database.\+h\item 
+src/Resource\+Database.\+cpp\end{DoxyCompactItemize}

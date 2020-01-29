@@ -1,0 +1,229 @@
+\hypertarget{classsimpleP2P_1_1Host}{}\section{simple\+P2P\+:\+:Host Class Reference}
+\label{classsimpleP2P_1_1Host}\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+
+
+Class contains node information and points to files it possess.  
+
+
+
+
+{\ttfamily \#include $<$Host.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1Host_abbe0b5c51195b8cf2019d791ace5a5c7}{Host} (boost\+::asio\+::ip\+::address ip)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_aa09ad4eaba6dce6de7d46e66808a60aa}\label{classsimpleP2P_1_1Host_aa09ad4eaba6dce6de7d46e66808a60aa}} 
+{\bfseries Host} (const \hyperlink{classsimpleP2P_1_1Host}{Host} \&other)
+\item 
+bool \hyperlink{classsimpleP2P_1_1Host_a242f1e472007f5b52bfdfbe74a47009f}{has\+\_\+resource} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res)
+\begin{DoxyCompactList}\small\item\em Determines if host has resource. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1Host_aadac09c6ab516f62e5eebe28dd584626}{operator==} (const \hyperlink{classsimpleP2P_1_1Host}{Host} \&other) const
+\begin{DoxyCompactList}\small\item\em Operator == checks host\+\_\+ip for equality. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1Host_a13516e95bf59bb8dd6eea8940f8bb677}{operator!=} (const \hyperlink{classsimpleP2P_1_1Host}{Host} \&other) const
+\begin{DoxyCompactList}\small\item\em Operator != checks host\+\_\+ip for equality. \end{DoxyCompactList}\item 
+boost\+::asio\+::ip\+::tcp\+::endpoint \hyperlink{classsimpleP2P_1_1Host_a25780ee00b380a84ad0a3312bfa635cb}{get\+\_\+endpoint} () const
+\begin{DoxyCompactList}\small\item\em Method returning boost tcp endpoint (ip address and port) of the host. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1Host_ace84648960b75e127112069be905357c}{is\+\_\+retarded} ()
+\begin{DoxyCompactList}\small\item\em Method returning true if program considers a given host to be retarded. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1Host_afcd858f4c6a7496b6164e36a5192f1db}{increase\+\_\+timeout\+\_\+counter} ()
+\begin{DoxyCompactList}\small\item\em Method increasing a host timeout counter. \end{DoxyCompactList}\item 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{classsimpleP2P_1_1Host_abfde4abb7dda157b1f589267b5facf05}{get\+\_\+ban\+\_\+time\+\_\+point} () const
+\begin{DoxyCompactList}\small\item\em Method returning a time point to which a host is considered to be retarded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a389f4e3d1f287f1e2d1c3e4c0d8dc8bb}\label{classsimpleP2P_1_1Host_a389f4e3d1f287f1e2d1c3e4c0d8dc8bb}} 
+std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ $>$ {\bfseries get\+\_\+possesed} () const
+\item 
+void \hyperlink{classsimpleP2P_1_1Host_acbe80ca99357b13ea06a56040bbd630f}{remove\+\_\+resource} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&res)
+\begin{DoxyCompactList}\small\item\em removes \hyperlink{classsimpleP2P_1_1Resource}{Resource} res \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1Host_a1b05aea31b1ae64ff77124c959dab26c}{add\+\_\+resource} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ \&res)
+\begin{DoxyCompactList}\small\item\em adds \hyperlink{classsimpleP2P_1_1Resource}{Resource} res \end{DoxyCompactList}\item 
+Uint16 \hyperlink{classsimpleP2P_1_1Host_a408c8c8ddcc1f6d9ee966ec73fe812d3}{get\+\_\+missed\+\_\+updates} () const
+\begin{DoxyCompactList}\small\item\em Getter for no of missed updates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a7dd6ef8ea2767b27f583bf4b43bc7d84}\label{classsimpleP2P_1_1Host_a7dd6ef8ea2767b27f583bf4b43bc7d84}} 
+void \hyperlink{classsimpleP2P_1_1Host_a7dd6ef8ea2767b27f583bf4b43bc7d84}{reset\+\_\+missed\+\_\+updates} ()
+\begin{DoxyCompactList}\small\item\em reset missed updates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a6e6e0445e505ffcf0ca6f206bcafc2b1}\label{classsimpleP2P_1_1Host_a6e6e0445e505ffcf0ca6f206bcafc2b1}} 
+void \hyperlink{classsimpleP2P_1_1Host_a6e6e0445e505ffcf0ca6f206bcafc2b1}{inc\+\_\+missed\+\_\+updates} ()
+\begin{DoxyCompactList}\small\item\em increments missed updates couter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_aaf16af8d445d6a9e7d14e80e5b8ec941}\label{classsimpleP2P_1_1Host_aaf16af8d445d6a9e7d14e80e5b8ec941}} 
+void \hyperlink{classsimpleP2P_1_1Host_aaf16af8d445d6a9e7d14e80e5b8ec941}{remove\+\_\+all\+\_\+resources} ()
+\begin{DoxyCompactList}\small\item\em clears possesd resources \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class contains node information and points to files it possess. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_abbe0b5c51195b8cf2019d791ace5a5c7}\label{classsimpleP2P_1_1Host_abbe0b5c51195b8cf2019d791ace5a5c7}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!Host@{Host}}
+\index{Host@{Host}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{Host()}{Host()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Host\+::\+Host (\begin{DoxyParamCaption}\item[{boost\+::asio\+::ip\+::address}]{ip }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & Ip of the \hyperlink{classsimpleP2P_1_1Host}{Host} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a1b05aea31b1ae64ff77124c959dab26c}\label{classsimpleP2P_1_1Host_a1b05aea31b1ae64ff77124c959dab26c}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!add\+\_\+resource@{add\+\_\+resource}}
+\index{add\+\_\+resource@{add\+\_\+resource}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{add\+\_\+resource()}{add\_resource()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Host\+::add\+\_\+resource (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ \&}]{res }\end{DoxyParamCaption})}
+
+
+
+adds \hyperlink{classsimpleP2P_1_1Resource}{Resource} res 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_abfde4abb7dda157b1f589267b5facf05}\label{classsimpleP2P_1_1Host_abfde4abb7dda157b1f589267b5facf05}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!get\+\_\+ban\+\_\+time\+\_\+point@{get\+\_\+ban\+\_\+time\+\_\+point}}
+\index{get\+\_\+ban\+\_\+time\+\_\+point@{get\+\_\+ban\+\_\+time\+\_\+point}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{get\+\_\+ban\+\_\+time\+\_\+point()}{get\_ban\_time\_point()}}
+{\footnotesize\ttfamily std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point simple\+P2\+P\+::\+Host\+::get\+\_\+ban\+\_\+time\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method returning a time point to which a host is considered to be retarded. 
+
+\begin{DoxyReturn}{Returns}
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a25780ee00b380a84ad0a3312bfa635cb}\label{classsimpleP2P_1_1Host_a25780ee00b380a84ad0a3312bfa635cb}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!get\+\_\+endpoint@{get\+\_\+endpoint}}
+\index{get\+\_\+endpoint@{get\+\_\+endpoint}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{get\+\_\+endpoint()}{get\_endpoint()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::endpoint simple\+P2\+P\+::\+Host\+::get\+\_\+endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method returning boost tcp endpoint (ip address and port) of the host. 
+
+\begin{DoxyReturn}{Returns}
+boost\+::asio\+::ip\+::tcp\+::endpoint 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a408c8c8ddcc1f6d9ee966ec73fe812d3}\label{classsimpleP2P_1_1Host_a408c8c8ddcc1f6d9ee966ec73fe812d3}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!get\+\_\+missed\+\_\+updates@{get\+\_\+missed\+\_\+updates}}
+\index{get\+\_\+missed\+\_\+updates@{get\+\_\+missed\+\_\+updates}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{get\+\_\+missed\+\_\+updates()}{get\_missed\_updates()}}
+{\footnotesize\ttfamily uint16\+\_\+t simple\+P2\+P\+::\+Host\+::get\+\_\+missed\+\_\+updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for no of missed updates. 
+
+\begin{DoxyReturn}{Returns}
+missed updates count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a242f1e472007f5b52bfdfbe74a47009f}\label{classsimpleP2P_1_1Host_a242f1e472007f5b52bfdfbe74a47009f}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!has\+\_\+resource@{has\+\_\+resource}}
+\index{has\+\_\+resource@{has\+\_\+resource}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{has\+\_\+resource()}{has\_resource()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Host\+::has\+\_\+resource (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Determines if host has resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if \hyperlink{classsimpleP2P_1_1Host}{Host} has \hyperlink{classsimpleP2P_1_1Resource}{Resource} res 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_afcd858f4c6a7496b6164e36a5192f1db}\label{classsimpleP2P_1_1Host_afcd858f4c6a7496b6164e36a5192f1db}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!increase\+\_\+timeout\+\_\+counter@{increase\+\_\+timeout\+\_\+counter}}
+\index{increase\+\_\+timeout\+\_\+counter@{increase\+\_\+timeout\+\_\+counter}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{increase\+\_\+timeout\+\_\+counter()}{increase\_timeout\_counter()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Host\+::increase\+\_\+timeout\+\_\+counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method increasing a host timeout counter. 
+
+After exeeding timeout limit, a host is considered to be retarded up to some point in time. \mbox{\Hypertarget{classsimpleP2P_1_1Host_ace84648960b75e127112069be905357c}\label{classsimpleP2P_1_1Host_ace84648960b75e127112069be905357c}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!is\+\_\+retarded@{is\+\_\+retarded}}
+\index{is\+\_\+retarded@{is\+\_\+retarded}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{is\+\_\+retarded()}{is\_retarded()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Host\+::is\+\_\+retarded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method returning true if program considers a given host to be retarded. 
+
+\begin{DoxyReturn}{Returns}
+true if a host is retarded 
+
+false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_a13516e95bf59bb8dd6eea8940f8bb677}\label{classsimpleP2P_1_1Host_a13516e95bf59bb8dd6eea8940f8bb677}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Host\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Host}{Host} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Operator != checks host\+\_\+ip for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_aadac09c6ab516f62e5eebe28dd584626}\label{classsimpleP2P_1_1Host_aadac09c6ab516f62e5eebe28dd584626}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!operator==@{operator==}}
+\index{operator==@{operator==}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Host\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Host}{Host} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Operator == checks host\+\_\+ip for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1Host_acbe80ca99357b13ea06a56040bbd630f}\label{classsimpleP2P_1_1Host_acbe80ca99357b13ea06a56040bbd630f}} 
+\index{simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}!remove\+\_\+resource@{remove\+\_\+resource}}
+\index{remove\+\_\+resource@{remove\+\_\+resource}!simple\+P2\+P\+::\+Host@{simple\+P2\+P\+::\+Host}}
+\subsubsection{\texorpdfstring{remove\+\_\+resource()}{remove\_resource()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Host\+::remove\+\_\+resource (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{res }\end{DoxyParamCaption})}
+
+
+
+removes \hyperlink{classsimpleP2P_1_1Resource}{Resource} res 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to remove \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Host.\+h\item 
+src/Host.\+cpp\end{DoxyCompactItemize}

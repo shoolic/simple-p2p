@@ -1,0 +1,85 @@
+\hypertarget{classsimpleP2P_1_1UdpModule}{}\section{simple\+P2P\+:\+:Udp\+Module Class Reference}
+\label{classsimpleP2P_1_1UdpModule}\index{simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}}
+
+
+Class containing all U\+DP related resources and logic.  
+
+
+
+
+{\ttfamily \#include $<$Udp\+Module.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1UdpModule_a05de956f448698b1f5acb1377dacd50c}{Udp\+Module} (\hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&database\+\_\+c, \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&logger\+\_\+c, boost\+::asio\+::ip\+::address broadcast\+\_\+address, Uint16 port, Uint32 beacon\+\_\+interval)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classsimpleP2P_1_1UdpModule_ac5602c9d0eaf0969dda8c71e5189827f}{init} ()
+\begin{DoxyCompactList}\small\item\em Init methods run worker in thread and returns it. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1UdpModule_a087b1b9aa9c20724df4856d43a90e031}{revoke\+\_\+file} (const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&resource)
+\begin{DoxyCompactList}\small\item\em Sends revoke datagram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing all U\+DP related resources and logic. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpModule_a05de956f448698b1f5acb1377dacd50c}\label{classsimpleP2P_1_1UdpModule_a05de956f448698b1f5acb1377dacd50c}} 
+\index{simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}!Udp\+Module@{Udp\+Module}}
+\index{Udp\+Module@{Udp\+Module}!simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}}
+\subsubsection{\texorpdfstring{Udp\+Module()}{UdpModule()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Udp\+Module\+::\+Udp\+Module (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&}]{database\+\_\+c,  }\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{logger\+\_\+c,  }\item[{boost\+::asio\+::ip\+::address}]{broadcast\+\_\+address,  }\item[{Uint16}]{port,  }\item[{Uint32}]{beacon\+\_\+interval }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em broadcast\+\_\+address} & address on which packets will be sent \\
+\hline
+{\em port} & port on which packets will be sent \\
+\hline
+{\em beacon\+\_\+interval} & beacon interval \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpModule_ac5602c9d0eaf0969dda8c71e5189827f}\label{classsimpleP2P_1_1UdpModule_ac5602c9d0eaf0969dda8c71e5189827f}} 
+\index{simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}!init@{init}}
+\index{init@{init}!simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::thread simple\+P2\+P\+::\+Udp\+Module\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Init methods run worker in thread and returns it. 
+
+\begin{DoxyReturn}{Returns}
+logging thread 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpModule_a087b1b9aa9c20724df4856d43a90e031}\label{classsimpleP2P_1_1UdpModule_a087b1b9aa9c20724df4856d43a90e031}} 
+\index{simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}!revoke\+\_\+file@{revoke\+\_\+file}}
+\index{revoke\+\_\+file@{revoke\+\_\+file}!simple\+P2\+P\+::\+Udp\+Module@{simple\+P2\+P\+::\+Udp\+Module}}
+\subsubsection{\texorpdfstring{revoke\+\_\+file()}{revoke\_file()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Udp\+Module\+::revoke\+\_\+file (\begin{DoxyParamCaption}\item[{const \hyperlink{classsimpleP2P_1_1Resource}{Resource} \&}]{resource }\end{DoxyParamCaption})}
+
+
+
+Sends revoke datagram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} t obe revoked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Udp\+Module.\+h\item 
+src/Udp\+Module.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classsimpleP2P_1_1LoggingModule}{}\section{simple\+P2P\+:\+:Logging\+Module Class Reference}
+\label{classsimpleP2P_1_1LoggingModule}\index{simple\+P2\+P\+::\+Logging\+Module@{simple\+P2\+P\+::\+Logging\+Module}}
+
+
+class Providing logging support based on text logs  
+
+
+
+
+{\ttfamily \#include $<$Logging\+Module.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1LoggingModule_abdd131c9caa8d9472a1a60a3d3f72be1}{Logging\+Module} (std\+::ostream \&output\+\_\+c=std\+::cerr)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1LoggingModule_af9d95113f09de5817fbca07114ea6aa2}\label{classsimpleP2P_1_1LoggingModule_af9d95113f09de5817fbca07114ea6aa2}} 
+std\+::thread \hyperlink{classsimpleP2P_1_1LoggingModule_af9d95113f09de5817fbca07114ea6aa2}{init} ()
+\begin{DoxyCompactList}\small\item\em Init thread for the logging module. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1LoggingModule_ac251f998da1ac3e7fb7452012a024d46}{add\+\_\+log\+\_\+line} (std\+::string line, const std\+::time\+\_\+t \&time)
+\begin{DoxyCompactList}\small\item\em Synchronised method for logging output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class Providing logging support based on text logs 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1LoggingModule_abdd131c9caa8d9472a1a60a3d3f72be1}\label{classsimpleP2P_1_1LoggingModule_abdd131c9caa8d9472a1a60a3d3f72be1}} 
+\index{simple\+P2\+P\+::\+Logging\+Module@{simple\+P2\+P\+::\+Logging\+Module}!Logging\+Module@{Logging\+Module}}
+\index{Logging\+Module@{Logging\+Module}!simple\+P2\+P\+::\+Logging\+Module@{simple\+P2\+P\+::\+Logging\+Module}}
+\subsubsection{\texorpdfstring{Logging\+Module()}{LoggingModule()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Logging\+Module\+::\+Logging\+Module (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output\+\_\+c = {\ttfamily std\+:\+:cerr} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+c} & Output stream for the logs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+if output stream is a file you must explicitly close it 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1LoggingModule_ac251f998da1ac3e7fb7452012a024d46}\label{classsimpleP2P_1_1LoggingModule_ac251f998da1ac3e7fb7452012a024d46}} 
+\index{simple\+P2\+P\+::\+Logging\+Module@{simple\+P2\+P\+::\+Logging\+Module}!add\+\_\+log\+\_\+line@{add\+\_\+log\+\_\+line}}
+\index{add\+\_\+log\+\_\+line@{add\+\_\+log\+\_\+line}!simple\+P2\+P\+::\+Logging\+Module@{simple\+P2\+P\+::\+Logging\+Module}}
+\subsubsection{\texorpdfstring{add\+\_\+log\+\_\+line()}{add\_log\_line()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Logging\+Module\+::add\+\_\+log\+\_\+line (\begin{DoxyParamCaption}\item[{std\+::string}]{line,  }\item[{const std\+::time\+\_\+t \&}]{time }\end{DoxyParamCaption})}
+
+
+
+Synchronised method for logging output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Logging\+Module.\+h\item 
+src/Logging\+Module.\+cpp\end{DoxyCompactItemize}

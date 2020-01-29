@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  host:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      network: host
+      dockerfile: Dockerfile
+    image: simple_p2p/release
+    networks:
+      - simple_p2p_network
+
+networks:
+  simple_p2p_network:
+    driver: bridge

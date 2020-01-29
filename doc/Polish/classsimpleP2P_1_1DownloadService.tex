@@ -1,0 +1,72 @@
+\hypertarget{classsimpleP2P_1_1DownloadService}{}\section{simple\+P2P\+:\+:Download\+Service Class Reference}
+\label{classsimpleP2P_1_1DownloadService}\index{simple\+P2\+P\+::\+Download\+Service@{simple\+P2\+P\+::\+Download\+Service}}
+
+
+Used to download resource.  
+
+
+
+
+{\ttfamily \#include $<$Download\+Service.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1DownloadService_a3d0394fd9f3c7a954ad3dbe6249fbf42}{Download\+Service} (\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&logging\+\_\+module\+\_\+c, boost\+::asio\+::io\+\_\+service \&io\+\_\+service\+\_\+c, \hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&file\+\_\+manager\+\_\+c, \hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&resource\+\_\+database\+\_\+c, std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ resource\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Construct a new Download Service object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadService_ab16e0deab0bba9b03a251a3ff5af114c}\label{classsimpleP2P_1_1DownloadService_ab16e0deab0bba9b03a251a3ff5af114c}} 
+void \hyperlink{classsimpleP2P_1_1DownloadService_ab16e0deab0bba9b03a251a3ff5af114c}{init} ()
+\begin{DoxyCompactList}\small\item\em Method initiating downloading in the current thread. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classsimpleP2P_1_1DownloadService_a420979e6932be2f09bcc2b34e7ac8b7a}{init\+\_\+thread} ()
+\begin{DoxyCompactList}\small\item\em Method initiating downloading in a new thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to download resource. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadService_a3d0394fd9f3c7a954ad3dbe6249fbf42}\label{classsimpleP2P_1_1DownloadService_a3d0394fd9f3c7a954ad3dbe6249fbf42}} 
+\index{simple\+P2\+P\+::\+Download\+Service@{simple\+P2\+P\+::\+Download\+Service}!Download\+Service@{Download\+Service}}
+\index{Download\+Service@{Download\+Service}!simple\+P2\+P\+::\+Download\+Service@{simple\+P2\+P\+::\+Download\+Service}}
+\subsubsection{\texorpdfstring{Download\+Service()}{DownloadService()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Download\+Service\+::\+Download\+Service (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{logging\+\_\+module\+\_\+c,  }\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service\+\_\+c,  }\item[{\hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&}]{file\+\_\+manager\+\_\+c,  }\item[{\hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&}]{resource\+\_\+database\+\_\+c,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$}]{resource\+\_\+c }\end{DoxyParamCaption})}
+
+
+
+Construct a new Download Service object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logging\+\_\+module\+\_\+c} & \\
+\hline
+{\em io\+\_\+service\+\_\+c} & \\
+\hline
+{\em file\+\_\+manager\+\_\+c} & \\
+\hline
+{\em resource\+\_\+database\+\_\+c} & \\
+\hline
+{\em resource\+\_\+c} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadService_a420979e6932be2f09bcc2b34e7ac8b7a}\label{classsimpleP2P_1_1DownloadService_a420979e6932be2f09bcc2b34e7ac8b7a}} 
+\index{simple\+P2\+P\+::\+Download\+Service@{simple\+P2\+P\+::\+Download\+Service}!init\+\_\+thread@{init\+\_\+thread}}
+\index{init\+\_\+thread@{init\+\_\+thread}!simple\+P2\+P\+::\+Download\+Service@{simple\+P2\+P\+::\+Download\+Service}}
+\subsubsection{\texorpdfstring{init\+\_\+thread()}{init\_thread()}}
+{\footnotesize\ttfamily std\+::thread simple\+P2\+P\+::\+Download\+Service\+::init\+\_\+thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method initiating downloading in a new thread. 
+
+\begin{DoxyReturn}{Returns}
+std\+::thread 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Download\+Service.\+h\item 
+src/Download\+Service.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classsimpleP2P_1_1RequestWorker}{}\section{simple\+P2P\+:\+:Request\+Worker Class Reference}
+\label{classsimpleP2P_1_1RequestWorker}\index{simple\+P2\+P\+::\+Request\+Worker@{simple\+P2\+P\+::\+Request\+Worker}}
+
+
+T\+CP connection handler, created by the T\+CP server.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Worker.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1RequestWorker_ad115dd761b5e9be155d0631c7392734a}{Request\+Worker} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, \hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&fm, \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&lm)
+\begin{DoxyCompactList}\small\item\em Constructor allows setting the socket on which the connection is established. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestWorker_a2581f6fe51f1140db9d1e7c9b33900ba}\label{classsimpleP2P_1_1RequestWorker_a2581f6fe51f1140db9d1e7c9b33900ba}} 
+void \hyperlink{classsimpleP2P_1_1RequestWorker_a2581f6fe51f1140db9d1e7c9b33900ba}{start} ()
+\begin{DoxyCompactList}\small\item\em Start handling the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestWorker_aaf449574acb97751ab086c519bb17955}\label{classsimpleP2P_1_1RequestWorker_aaf449574acb97751ab086c519bb17955}} 
+tcp\+::socket \& \hyperlink{classsimpleP2P_1_1RequestWorker_aaf449574acb97751ab086c519bb17955}{socket} ()
+\begin{DoxyCompactList}\small\item\em Get socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+CP connection handler, created by the T\+CP server. 
+
+Receives the file request, buffers requested segments and sends them to the client. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestWorker_ad115dd761b5e9be155d0631c7392734a}\label{classsimpleP2P_1_1RequestWorker_ad115dd761b5e9be155d0631c7392734a}} 
+\index{simple\+P2\+P\+::\+Request\+Worker@{simple\+P2\+P\+::\+Request\+Worker}!Request\+Worker@{Request\+Worker}}
+\index{Request\+Worker@{Request\+Worker}!simple\+P2\+P\+::\+Request\+Worker@{simple\+P2\+P\+::\+Request\+Worker}}
+\subsubsection{\texorpdfstring{Request\+Worker()}{RequestWorker()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Request\+Worker\+::\+Request\+Worker (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service,  }\item[{\hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&}]{fm,  }\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{lm }\end{DoxyParamCaption})}
+
+
+
+Constructor allows setting the socket on which the connection is established. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+service} & io\+\_\+service in which the server runs \\
+\hline
+{\em fm} & \hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} for accessing requested files \\
+\hline
+{\em lm} & \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} for logging events \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Request\+Worker.\+h\item 
+src/Request\+Worker.\+cpp\end{DoxyCompactItemize}

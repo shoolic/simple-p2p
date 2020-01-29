@@ -1,0 +1,148 @@
+\hypertarget{classsimpleP2P_1_1CompleteResource}{}\section{simple\+P2P\+:\+:Complete\+Resource Class Reference}
+\label{classsimpleP2P_1_1CompleteResource}\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+
+
+Class representing a complete resource (resource and full its data)  
+
+
+
+
+{\ttfamily \#include $<$Complete\+Resource.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1CompleteResource_a758df5fa183938450b71d1e36af8fbaf}{Complete\+Resource} (std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ resource\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Construct a new Complete \hyperlink{classsimpleP2P_1_1Resource}{Resource} object based on base \hyperlink{classsimpleP2P_1_1Resource}{Resource} object. \end{DoxyCompactList}\item 
+Uint8 $\ast$ \hyperlink{classsimpleP2P_1_1CompleteResource_a28c22b852e21d864086440b82822ffa3}{get\+\_\+data} ()
+\begin{DoxyCompactList}\small\item\em Get the contents of the file. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ \hyperlink{classsimpleP2P_1_1CompleteResource_ac31825cc3bed61d181456430db3878f4}{get\+\_\+resource} () const
+\begin{DoxyCompactList}\small\item\em Get the underlaying resource object. \end{DoxyCompactList}\item 
+\hyperlink{classsimpleP2P_1_1Segment}{Segment} \hyperlink{classsimpleP2P_1_1CompleteResource_aabe86fbdc8daab23c1df0bc2abb91e7d}{get\+\_\+segment} ()
+\begin{DoxyCompactList}\small\item\em Synchronised method returning \hyperlink{classsimpleP2P_1_1Segment}{Segment} object representing the first unbusy and incomplete segment. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1CompleteResource_a52ddae2486fb593cc315247af38014e7}{set\+\_\+segment} (\hyperlink{classsimpleP2P_1_1Segment}{Segment} \&segment)
+\begin{DoxyCompactList}\small\item\em Synchronised method marking the given segment as completed. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1CompleteResource_aaa20fce1d1d3fbd3f616debaedcaf7a3}{is\+\_\+completed} ()
+\begin{DoxyCompactList}\small\item\em Synchronised method returning true if all segments have been downloaded, false otherwise. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1CompleteResource_af2dd5d30d807b11ecdad7feaf488df89}{unset\+\_\+busy} (Segment\+Id id)
+\begin{DoxyCompactList}\small\item\em Synchronised method unmarking busy segment and notifying one of waithing worker threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a complete resource (resource and full its data) 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_a758df5fa183938450b71d1e36af8fbaf}\label{classsimpleP2P_1_1CompleteResource_a758df5fa183938450b71d1e36af8fbaf}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!Complete\+Resource@{Complete\+Resource}}
+\index{Complete\+Resource@{Complete\+Resource}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{Complete\+Resource()}{CompleteResource()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Complete\+Resource\+::\+Complete\+Resource (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$}]{resource\+\_\+c }\end{DoxyParamCaption})}
+
+
+
+Construct a new Complete \hyperlink{classsimpleP2P_1_1Resource}{Resource} object based on base \hyperlink{classsimpleP2P_1_1Resource}{Resource} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\+\_\+c} & base resource object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_a28c22b852e21d864086440b82822ffa3}\label{classsimpleP2P_1_1CompleteResource_a28c22b852e21d864086440b82822ffa3}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{get\+\_\+data()}{get\_data()}}
+{\footnotesize\ttfamily Uint8 $\ast$ simple\+P2\+P\+::\+Complete\+Resource\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the contents of the file. 
+
+\begin{DoxyReturn}{Returns}
+Uint8$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_ac31825cc3bed61d181456430db3878f4}\label{classsimpleP2P_1_1CompleteResource_ac31825cc3bed61d181456430db3878f4}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!get\+\_\+resource@{get\+\_\+resource}}
+\index{get\+\_\+resource@{get\+\_\+resource}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{get\+\_\+resource()}{get\_resource()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Resource}{Resource} $>$ simple\+P2\+P\+::\+Complete\+Resource\+::get\+\_\+resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the underlaying resource object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Resource$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_aabe86fbdc8daab23c1df0bc2abb91e7d}\label{classsimpleP2P_1_1CompleteResource_aabe86fbdc8daab23c1df0bc2abb91e7d}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!get\+\_\+segment@{get\+\_\+segment}}
+\index{get\+\_\+segment@{get\+\_\+segment}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{get\+\_\+segment()}{get\_segment()}}
+{\footnotesize\ttfamily \hyperlink{classsimpleP2P_1_1Segment}{Segment} simple\+P2\+P\+::\+Complete\+Resource\+::get\+\_\+segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronised method returning \hyperlink{classsimpleP2P_1_1Segment}{Segment} object representing the first unbusy and incomplete segment. 
+
+If resource downlaoding has been completed, special \hyperlink{classsimpleP2P_1_1Segment}{Segment} object with id set to N\+O\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+ID is returned. If there is no appropriate segment found and downloading is not completed, method suspends calling worker thread pending some segment release.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classsimpleP2P_1_1Segment}{Segment} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_aaa20fce1d1d3fbd3f616debaedcaf7a3}\label{classsimpleP2P_1_1CompleteResource_aaa20fce1d1d3fbd3f616debaedcaf7a3}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!is\+\_\+completed@{is\+\_\+completed}}
+\index{is\+\_\+completed@{is\+\_\+completed}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{is\+\_\+completed()}{is\_completed()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Complete\+Resource\+::is\+\_\+completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronised method returning true if all segments have been downloaded, false otherwise. 
+
+\begin{DoxyReturn}{Returns}
+true if downloading is completed 
+
+false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_a52ddae2486fb593cc315247af38014e7}\label{classsimpleP2P_1_1CompleteResource_a52ddae2486fb593cc315247af38014e7}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!set\+\_\+segment@{set\+\_\+segment}}
+\index{set\+\_\+segment@{set\+\_\+segment}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{set\+\_\+segment()}{set\_segment()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Complete\+Resource\+::set\+\_\+segment (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1Segment}{Segment} \&}]{segment }\end{DoxyParamCaption})}
+
+
+
+Synchronised method marking the given segment as completed. 
+
+If all segments have been downloaded, method notifies all waiting worker threads so that they can join.
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1CompleteResource_af2dd5d30d807b11ecdad7feaf488df89}\label{classsimpleP2P_1_1CompleteResource_af2dd5d30d807b11ecdad7feaf488df89}} 
+\index{simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}!unset\+\_\+busy@{unset\+\_\+busy}}
+\index{unset\+\_\+busy@{unset\+\_\+busy}!simple\+P2\+P\+::\+Complete\+Resource@{simple\+P2\+P\+::\+Complete\+Resource}}
+\subsubsection{\texorpdfstring{unset\+\_\+busy()}{unset\_busy()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Complete\+Resource\+::unset\+\_\+busy (\begin{DoxyParamCaption}\item[{Segment\+Id}]{id }\end{DoxyParamCaption})}
+
+
+
+Synchronised method unmarking busy segment and notifying one of waithing worker threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Complete\+Resource.\+h\item 
+src/Complete\+Resource.\+cpp\end{DoxyCompactItemize}

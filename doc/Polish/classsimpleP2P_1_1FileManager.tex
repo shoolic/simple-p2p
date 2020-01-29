@@ -1,0 +1,121 @@
+\hypertarget{classsimpleP2P_1_1FileManager}{}\section{simple\+P2P\+:\+:File\+Manager Class Reference}
+\label{classsimpleP2P_1_1FileManager}\index{simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}}
+
+
+Handles read/write to the files on disc.  
+
+
+
+
+{\ttfamily \#include $<$File\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1FileManager_a335188a96b1d257ed0ecdaf76befec95}\label{classsimpleP2P_1_1FileManager_a335188a96b1d257ed0ecdaf76befec95}} 
+{\bfseries File\+Manager} (\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&lm)
+\item 
+bool \hyperlink{classsimpleP2P_1_1FileManager_ae6d78d28f40cc7fabe16de7a124a38be}{get\+\_\+segment} (const std\+::string file\+\_\+name, const Uint16 segment, Uint8 $\ast$result, const std\+::size\+\_\+t requested\+\_\+segment\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Buffers the specificated segment of the specificated file in the char array. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1FileManager_a120fec780f9a6bf350ffbac731376213}{store\+\_\+resource} (std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1CompleteResource}{Complete\+Resource} $>$ complete\+\_\+resource)
+\begin{DoxyCompactList}\small\item\em Stores the file contents in the physical file on disc. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1FileManager_ad20db5b0d3c3eea9f22ddef7b28c3348}{read\+\_\+lock} (const std\+::string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Closes the file and unlocks it for writing. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1FileManager_a5152eb630ec61c6465f3302934696c12}{read\+\_\+unlock} (const std\+::string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Closes a file which was opened for reading and enables other threads to write to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles read/write to the files on disc. 
+
+An A\+PI which provides\+:
+\begin{DoxyItemize}
+\item buffering contents of a requested segment of a specificated local file,
+\item storing a complete, downloaded file physically on the local disc. Ensures synchronization of those operations. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1FileManager_ae6d78d28f40cc7fabe16de7a124a38be}\label{classsimpleP2P_1_1FileManager_ae6d78d28f40cc7fabe16de7a124a38be}} 
+\index{simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}!get\+\_\+segment@{get\+\_\+segment}}
+\index{get\+\_\+segment@{get\+\_\+segment}!simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}}
+\subsubsection{\texorpdfstring{get\+\_\+segment()}{get\_segment()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+File\+Manager\+::get\+\_\+segment (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name,  }\item[{const Uint16}]{segment,  }\item[{Uint8 $\ast$}]{result,  }\item[{const std\+::size\+\_\+t}]{requested\+\_\+segment\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Buffers the specificated segment of the specificated file in the char array. 
+
+\begin{DoxyWarning}{Warning}
+Calling this function M\+U\+ST be preceded by a successful call to \hyperlink{classsimpleP2P_1_1FileManager_ad20db5b0d3c3eea9f22ddef7b28c3348}{read\+\_\+lock()} on the file specified in resource\+\_\+header equal to the one carried by the Segment\+Request.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Specifies file and its segment to buffer. \\
+\hline
+{\em result} & The array to buffer the segment in. Its size must be greater or equal to the 3rd parameter! \\
+\hline
+{\em requested\+\_\+segment\+\_\+size} & Size of the segment to buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the segment has been buffered successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1FileManager_ad20db5b0d3c3eea9f22ddef7b28c3348}\label{classsimpleP2P_1_1FileManager_ad20db5b0d3c3eea9f22ddef7b28c3348}} 
+\index{simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}!read\+\_\+lock@{read\+\_\+lock}}
+\index{read\+\_\+lock@{read\+\_\+lock}!simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}}
+\subsubsection{\texorpdfstring{read\+\_\+lock()}{read\_lock()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+File\+Manager\+::read\+\_\+lock (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Closes the file and unlocks it for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\+\_\+header} & The file to be closed and unlocked. Opens a file for reading and prevents other threads from overwriting it until it\textquotesingle{}s closed.\\
+\hline
+{\em resource\+\_\+header} & The file to be opened and read-\/locked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the file has been opened successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1FileManager_a5152eb630ec61c6465f3302934696c12}\label{classsimpleP2P_1_1FileManager_a5152eb630ec61c6465f3302934696c12}} 
+\index{simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}!read\+\_\+unlock@{read\+\_\+unlock}}
+\index{read\+\_\+unlock@{read\+\_\+unlock}!simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}}
+\subsubsection{\texorpdfstring{read\+\_\+unlock()}{read\_unlock()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+File\+Manager\+::read\+\_\+unlock (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Closes a file which was opened for reading and enables other threads to write to it. 
+
+\begin{DoxyWarning}{Warning}
+This function M\+U\+ST be called after the reading has completed, so that the file can be overwritten in future.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpleP2P_1_1FileManager_a120fec780f9a6bf350ffbac731376213}\label{classsimpleP2P_1_1FileManager_a120fec780f9a6bf350ffbac731376213}} 
+\index{simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}!store\+\_\+resource@{store\+\_\+resource}}
+\index{store\+\_\+resource@{store\+\_\+resource}!simple\+P2\+P\+::\+File\+Manager@{simple\+P2\+P\+::\+File\+Manager}}
+\subsubsection{\texorpdfstring{store\+\_\+resource()}{store\_resource()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+File\+Manager\+::store\+\_\+resource (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1CompleteResource}{Complete\+Resource} $>$}]{complete\+\_\+resource }\end{DoxyParamCaption})}
+
+
+
+Stores the file contents in the physical file on disc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & File to store on the disc. The data will not be interpreted, so make sure it\textquotesingle{}s complete and ready to store. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/File\+Manager.\+h\item 
+src/File\+Manager.\+cpp\end{DoxyCompactItemize}

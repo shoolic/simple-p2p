@@ -1,0 +1,41 @@
+\hypertarget{classsimpleP2P_1_1RequestServerModule}{}\section{simple\+P2P\+:\+:Request\+Server\+Module Class Reference}
+\label{classsimpleP2P_1_1RequestServerModule}\index{simple\+P2\+P\+::\+Request\+Server\+Module@{simple\+P2\+P\+::\+Request\+Server\+Module}}
+
+
+Module of the T\+CP server receiving file requests and sending the requested files\textquotesingle{} segments.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Server\+Module.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestServerModule_a3dca7f496f8bd368ff68002c0224512b}\label{classsimpleP2P_1_1RequestServerModule_a3dca7f496f8bd368ff68002c0224512b}} 
+\hyperlink{classsimpleP2P_1_1RequestServerModule_a3dca7f496f8bd368ff68002c0224512b}{Request\+Server\+Module} (Uint16 port\+\_\+, \hyperlink{classsimpleP2P_1_1FileManager}{File\+Manager} \&fm, \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&lm)
+\begin{DoxyCompactList}\small\item\em Constructor, allows setting the port for the server. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classsimpleP2P_1_1RequestServerModule_a3ab4c254bd55ff9800156118e1ff472e}{init} ()
+\begin{DoxyCompactList}\small\item\em Returns the thread object for the module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module of the T\+CP server receiving file requests and sending the requested files\textquotesingle{} segments. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1RequestServerModule_a3ab4c254bd55ff9800156118e1ff472e}\label{classsimpleP2P_1_1RequestServerModule_a3ab4c254bd55ff9800156118e1ff472e}} 
+\index{simple\+P2\+P\+::\+Request\+Server\+Module@{simple\+P2\+P\+::\+Request\+Server\+Module}!init@{init}}
+\index{init@{init}!simple\+P2\+P\+::\+Request\+Server\+Module@{simple\+P2\+P\+::\+Request\+Server\+Module}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::thread simple\+P2\+P\+::\+Request\+Server\+Module\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the thread object for the module. 
+
+Starts the server and returns the thread in which the server works. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Request\+Server\+Module.\+h\item 
+src/Request\+Server\+Module.\+cpp\end{DoxyCompactItemize}

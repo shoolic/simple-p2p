@@ -1,0 +1,115 @@
+\hypertarget{classsimpleP2P_1_1DownloadWorker}{}\section{simple\+P2P\+:\+:Download\+Worker Class Reference}
+\label{classsimpleP2P_1_1DownloadWorker}\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+
+
+Class used to download resource segments from one host.  
+
+
+
+
+{\ttfamily \#include $<$Download\+Worker.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1DownloadWorker_a2861145541d88a86bf3b082e5272d1d8}{Download\+Worker} (\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&logging\+\_\+module\+\_\+c, boost\+::asio\+::io\+\_\+service \&io\+\_\+service\+\_\+c, std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Host}{Host} $>$ host\+\_\+c, std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1CompleteResource}{Complete\+Resource} $>$ complete\+\_\+resource\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Construct a new Download Worker object. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classsimpleP2P_1_1DownloadWorker_aedf77c7a4944beaee84494c83512551b}{init} ()
+\begin{DoxyCompactList}\small\item\em Method initiating connection to host and downloading resource segments in a new thread. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1DownloadWorker_a03f21eb4f4d1a1e3e87f983ff5e389f7}{check\+\_\+timeout} ()
+\begin{DoxyCompactList}\small\item\em Method checking worker timeout and taking appropriate actions if it exeeds\+: \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1DownloadWorker_ae975a4408ee3e8f85c0a067732dd44f0}{close} ()
+\begin{DoxyCompactList}\small\item\em ++ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_a5e46b7b54882ef35bfaf48b51573a96e}\label{classsimpleP2P_1_1DownloadWorker_a5e46b7b54882ef35bfaf48b51573a96e}} 
+bool \hyperlink{classsimpleP2P_1_1DownloadWorker_a5e46b7b54882ef35bfaf48b51573a96e}{is\+\_\+closed} ()
+\begin{DoxyCompactList}\small\item\em Synchronised method checking if worker is closed. \end{DoxyCompactList}\item 
+bool \hyperlink{classsimpleP2P_1_1DownloadWorker_a73743cf5fe1e579bc7cf0e5acb504450}{is\+\_\+unavailable} ()
+\begin{DoxyCompactList}\small\item\em Synchronised method checking if worker is available (not closed and associated host not retarded) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to download resource segments from one host. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_a2861145541d88a86bf3b082e5272d1d8}\label{classsimpleP2P_1_1DownloadWorker_a2861145541d88a86bf3b082e5272d1d8}} 
+\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}!Download\+Worker@{Download\+Worker}}
+\index{Download\+Worker@{Download\+Worker}!simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+\subsubsection{\texorpdfstring{Download\+Worker()}{DownloadWorker()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Download\+Worker\+::\+Download\+Worker (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{logging\+\_\+module\+\_\+c,  }\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service\+\_\+c,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1Host}{Host} $>$}]{host\+\_\+c,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classsimpleP2P_1_1CompleteResource}{Complete\+Resource} $>$}]{complete\+\_\+resource\+\_\+c }\end{DoxyParamCaption})}
+
+
+
+Construct a new Download Worker object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logging\+\_\+module\+\_\+c} & \\
+\hline
+{\em io\+\_\+service\+\_\+c} & \\
+\hline
+{\em host\+\_\+c} & \\
+\hline
+{\em complete\+\_\+resource\+\_\+c} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_a03f21eb4f4d1a1e3e87f983ff5e389f7}\label{classsimpleP2P_1_1DownloadWorker_a03f21eb4f4d1a1e3e87f983ff5e389f7}} 
+\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}!check\+\_\+timeout@{check\+\_\+timeout}}
+\index{check\+\_\+timeout@{check\+\_\+timeout}!simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+\subsubsection{\texorpdfstring{check\+\_\+timeout()}{check\_timeout()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Download\+Worker\+::check\+\_\+timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method checking worker timeout and taking appropriate actions if it exeeds\+: 
+
+
+\begin{DoxyItemize}
+\item the host timeout counter is increased, what may cause banning host for certain time,
+\item currently downloaded segment is marked as unbusy and may be downloaded by another worker. 
+\end{DoxyItemize}\mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_ae975a4408ee3e8f85c0a067732dd44f0}\label{classsimpleP2P_1_1DownloadWorker_ae975a4408ee3e8f85c0a067732dd44f0}} 
+\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}!close@{close}}
+\index{close@{close}!simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Download\+Worker\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+++ 
+
+Synchronised method closing worker politely. \mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_aedf77c7a4944beaee84494c83512551b}\label{classsimpleP2P_1_1DownloadWorker_aedf77c7a4944beaee84494c83512551b}} 
+\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}!init@{init}}
+\index{init@{init}!simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily std\+::thread simple\+P2\+P\+::\+Download\+Worker\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method initiating connection to host and downloading resource segments in a new thread. 
+
+\begin{DoxyReturn}{Returns}
+std\+::thread 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpleP2P_1_1DownloadWorker_a73743cf5fe1e579bc7cf0e5acb504450}\label{classsimpleP2P_1_1DownloadWorker_a73743cf5fe1e579bc7cf0e5acb504450}} 
+\index{simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}!is\+\_\+unavailable@{is\+\_\+unavailable}}
+\index{is\+\_\+unavailable@{is\+\_\+unavailable}!simple\+P2\+P\+::\+Download\+Worker@{simple\+P2\+P\+::\+Download\+Worker}}
+\subsubsection{\texorpdfstring{is\+\_\+unavailable()}{is\_unavailable()}}
+{\footnotesize\ttfamily bool simple\+P2\+P\+::\+Download\+Worker\+::is\+\_\+unavailable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronised method checking if worker is available (not closed and associated host not retarded) 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Download\+Worker.\+h\item 
+src/Download\+Worker.\+cpp\end{DoxyCompactItemize}

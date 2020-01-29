@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  host:
+    stdin_open: true
+    tty: true
+    build:
+      context: ..
+      network: host
+      dockerfile: docker-debug/Dockerfile
+    networks:
+      - simple_p2p_network
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+
+networks:
+  simple_p2p_network:
+    driver: bridge

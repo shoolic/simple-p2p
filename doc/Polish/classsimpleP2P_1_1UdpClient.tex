@@ -1,0 +1,80 @@
+\hypertarget{classsimpleP2P_1_1UdpClient}{}\section{simple\+P2P\+:\+:Udp\+Client Class Reference}
+\label{classsimpleP2P_1_1UdpClient}\index{simple\+P2\+P\+::\+Udp\+Client@{simple\+P2\+P\+::\+Udp\+Client}}
+
+
+class U\+DP Client to handle all outgoing packets  
+
+
+
+
+{\ttfamily \#include $<$Udp\+Client.\+h$>$}
+
+
+
+Inherits enable\+\_\+shared\+\_\+from\+\_\+this$<$ Udp\+Client $>$.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpleP2P_1_1UdpClient_a0596d4eb1e1a611a4306b13008eae1b4}{Udp\+Client} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, \hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&database, \hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&logger, const boost\+::asio\+::ip\+::address \&broadcast\+\_\+address, Uint16 broadcast\+\_\+port, Uint32 timeout=5 $\ast$60)
+\begin{DoxyCompactList}\small\item\em Constructor of U\+DP Client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpClient_a544cf1a231986b3c997593594b5ff925}\label{classsimpleP2P_1_1UdpClient_a544cf1a231986b3c997593594b5ff925}} 
+\hyperlink{classsimpleP2P_1_1UdpClient_a544cf1a231986b3c997593594b5ff925}{$\sim$\+Udp\+Client} ()
+\begin{DoxyCompactList}\small\item\em Destructor closes socket. \end{DoxyCompactList}\item 
+void \hyperlink{classsimpleP2P_1_1UdpClient_a0dc7645a01f83c3eded8e237b3b49eb1}{revoke\+\_\+file} (\hyperlink{classsimpleP2P_1_1Resource}{Resource} resource)
+\begin{DoxyCompactList}\small\item\em Constructs revoke header sends it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class U\+DP Client to handle all outgoing packets 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpClient_a0596d4eb1e1a611a4306b13008eae1b4}\label{classsimpleP2P_1_1UdpClient_a0596d4eb1e1a611a4306b13008eae1b4}} 
+\index{simple\+P2\+P\+::\+Udp\+Client@{simple\+P2\+P\+::\+Udp\+Client}!Udp\+Client@{Udp\+Client}}
+\index{Udp\+Client@{Udp\+Client}!simple\+P2\+P\+::\+Udp\+Client@{simple\+P2\+P\+::\+Udp\+Client}}
+\subsubsection{\texorpdfstring{Udp\+Client()}{UdpClient()}}
+{\footnotesize\ttfamily simple\+P2\+P\+::\+Udp\+Client\+::\+Udp\+Client (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service,  }\item[{\hyperlink{classsimpleP2P_1_1ResourceDatabase}{Resource\+Database} \&}]{database,  }\item[{\hyperlink{classsimpleP2P_1_1LoggingModule}{Logging\+Module} \&}]{logger,  }\item[{const boost\+::asio\+::ip\+::address \&}]{broadcast\+\_\+address,  }\item[{Uint16}]{broadcast\+\_\+port,  }\item[{Uint32}]{timeout = {\ttfamily 5~$\ast$~60} }\end{DoxyParamCaption})}
+
+
+
+Constructor of U\+DP Client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+service} & asio Io Service \\
+\hline
+{\em database} & Database \\
+\hline
+{\em logger} & Logger \\
+\hline
+{\em broadcast\+\_\+address} & address on which packets will be sent \\
+\hline
+{\em broadcast\+\_\+port} & port on which packets will be sent \\
+\hline
+{\em timeout} & beacon interval \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpleP2P_1_1UdpClient_a0dc7645a01f83c3eded8e237b3b49eb1}\label{classsimpleP2P_1_1UdpClient_a0dc7645a01f83c3eded8e237b3b49eb1}} 
+\index{simple\+P2\+P\+::\+Udp\+Client@{simple\+P2\+P\+::\+Udp\+Client}!revoke\+\_\+file@{revoke\+\_\+file}}
+\index{revoke\+\_\+file@{revoke\+\_\+file}!simple\+P2\+P\+::\+Udp\+Client@{simple\+P2\+P\+::\+Udp\+Client}}
+\subsubsection{\texorpdfstring{revoke\+\_\+file()}{revoke\_file()}}
+{\footnotesize\ttfamily void simple\+P2\+P\+::\+Udp\+Client\+::revoke\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpleP2P_1_1Resource}{simple\+P2\+P\+::\+Resource}}]{resource }\end{DoxyParamCaption})}
+
+
+
+Constructs revoke header sends it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & \hyperlink{classsimpleP2P_1_1Resource}{Resource} to be revoked \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Udp\+Client.\+h\item 
+src/Udp\+Client.\+cpp\end{DoxyCompactItemize}
