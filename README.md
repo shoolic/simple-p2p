@@ -91,3 +91,30 @@ Run
 
 If you would like to debug the program in your IDE, go to `docker-debug` directory and run [default command](#run-containers) to run containers.
 Configure your IDE to attach to one of the containers and run the program with debugging tools.
+
+### Testing with `tmux`
+#### Requirements
+- installed tmux
+
+#### Description
+- Run `tmux_start.sh` to simulate, monitor and test a network with 2 hosts in a tmux workspace presented below.
+
+- Run `tmux_end.sh` in the free pane to end the simulation.
+
+```
+┌────────────────────┬────────────────────┬────────────────────┐
+│ Free pane          │ host_1 program IO  │ host_2 program IO  │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    ├────────────────────┼────────────────────┤
+│                    │ host_1 container   │ host_2 container   │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+│                    │                    │                    │
+└────────────────────┴────────────────────┴────────────────────┘
+```
